@@ -1,0 +1,519 @@
+/* Overall Website Styling */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F8F5EF;
+    color: #344E45;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+
+nav {
+    background-color: #52766B;
+    margin: 20px auto;
+    max-width: 1200px;
+    width: calc(100% - 40px);
+    padding: 18px 30px;
+    border-radius: 14px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    font-size: 32px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+}
+
+.logo-name {
+    color: #FFFFFF;
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo-tagline {
+    color: #FFFFFF;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #D8C3A5;
+}
+
+/* Hero Section */
+
+.hero {
+    background-color: #D8C3A5;
+    margin: 25px auto;
+    max-width: 1200px;
+    width: calc(100% - 40px);
+    padding: 65px 30px;
+    border-radius: 14px;
+    text-align: center;
+}
+
+.hero h1 {
+    color: #344E45;
+    font-size: 36px;
+    margin: 0 0 12px;
+}
+
+.hero p {
+    color: #53665C;
+    font-size: 17px;
+    margin: 0;
+}
+
+/* Common Section Styling */
+
+section {
+    max-width: 1200px;
+    width: calc(100% - 40px);
+    margin: 35px auto;
+    padding: 35px;
+    border-radius: 14px;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+h2 {
+    color: #52766B;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+h3 {
+    color: #52766B;
+}
+
+p {
+    color: #53665C;
+}
+
+/* Verification Cards */
+
+.verification-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+}
+
+.verification-card {
+    flex: 1;
+    min-width: 0;
+    background-color: #F1E6D5;
+    padding: 30px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.verification-card h3 {
+    margin: 5px 0;
+}
+
+.verification-card p {
+    margin: 10px 0 20px;
+}
+
+input {
+    width: 100%;
+    max-width: 350px;
+    padding: 13px;
+    margin-bottom: 15px;
+    border: 1px solid #D8C3A5;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Buttons */
+
+button {
+    background-color: #52766B;
+    color: #FFFFFF;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #344E45;
+}
+
+/* Certificate Preview */
+
+.certificate {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 35px;
+    border: 2px solid #D8C3A5;
+    border-radius: 10px;
+    background-color: #F8F5EF;
+}
+
+.certificate h2 {
+    margin: 15px 0;
+}
+
+.certificate h3 {
+    margin: 12px 0;
+}
+
+/* Three Column Sections */
+
+.three-column-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.feature-card,
+.institution-card {
+    background-color: #F1E6D5;
+    padding: 25px 20px;
+    border-radius: 12px;
+}
+
+.feature-card h3,
+.institution-card h3 {
+    margin: 8px 0;
+}
+
+.feature-card p,
+.institution-card p {
+    margin-bottom: 0;
+}
+
+.section-description {
+    max-width: 750px;
+    margin: 0 auto 25px;
+}
+
+/* Footer */
+
+footer {
+    background-color: #52766B;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+footer h3,
+footer p {
+    color: #FFFFFF;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 18px;
+        padding: 20px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 45px 20px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .verification-container {
+        flex-direction: column;
+    }
+
+    .three-column-container {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 25px 18px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .logo-name {
+        font-size: 20px;
+    }
+
+    .logo-tagline {
+        font-size: 8px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+}
+
+/* Premium Certificate Design */
+
+.certificate {
+    max-width: 850px;
+    margin: 25px auto;
+    padding: 12px;
+    background: #D8C3A5;
+    border: 3px solid #52766B;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(52, 78, 69, 0.15);
+}
+
+.certificate-inner {
+    position: relative;
+    padding: 35px 30px;
+    border: 2px solid #52766B;
+    outline: 1px solid #D8C3A5;
+    outline-offset: -8px;
+    background-color: #FFFCF5;
+    text-align: center;
+}
+
+.certificate-header {
+    margin-bottom: 18px;
+}
+
+.certificate-logo {
+    font-size: 35px;
+}
+
+.certificate-header h3 {
+    color: #344E45;
+    font-size: 25px;
+    letter-spacing: 4px;
+    margin: 5px 0;
+}
+
+.certificate-header p {
+    color: #92784F;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.certificate-divider {
+    width: 70%;
+    height: 2px;
+    background: #D8C3A5;
+    margin: 20px auto;
+}
+
+.certificate-label {
+    color: #52766B;
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 20px 0;
+}
+
+.presented-text {
+    font-family: Georgia, serif;
+    font-style: italic;
+    margin: 15px 0;
+}
+
+.student-name {
+    color: #344E45;
+    font-family: Georgia, serif;
+    font-size: 34px;
+    margin: 10px 0;
+    letter-spacing: 2px;
+}
+
+.gold-line {
+    width: 45%;
+    height: 2px;
+    background: #B99A62;
+    margin: 15px auto;
+}
+
+.course-text {
+    margin: 15px 0 5px;
+}
+
+.course-name {
+    color: #52766B;
+    font-family: Georgia, serif;
+    font-size: 24px;
+    margin: 5px 0 15px;
+}
+
+.appreciation {
+    max-width: 500px;
+    margin: 15px auto;
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+
+.certificate-details {
+    margin: 25px auto;
+    font-size: 13px;
+}
+
+.certificate-details p {
+    margin: 5px;
+}
+
+.certificate-bottom {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.signature {
+    width: 30%;
+}
+
+.signature-line {
+    border-top: 1px solid #52766B;
+    margin-bottom: 8px;
+}
+
+.signature p {
+    font-size: 11px;
+    margin: 0;
+}
+
+.verification-seal {
+    width: 85px;
+    height: 85px;
+    border: 3px double #B99A62;
+    border-radius: 50%;
+    color: #52766B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-8deg);
+}
+
+.verification-seal span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.verification-seal small {
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.certificate-footer {
+    color: #92784F;
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+
+/* Certificate Mobile Responsiveness */
+
+@media (max-width: 600px) {
+
+    .certificate {
+        padding: 7px;
+    }
+
+    .certificate-inner {
+        padding: 25px 12px;
+    }
+
+    .certificate-label {
+        font-size: 19px;
+    }
+
+    .student-name {
+        font-size: 25px;
+    }
+
+    .course-name {
+        font-size: 19px;
+    }
+
+    .certificate-header h3 {
+        font-size: 20px;
+    }
+
+    .certificate-bottom {
+        gap: 8px;
+    }
+
+    .verification-seal {
+        width: 65px;
+        height: 65px;
+        flex-shrink: 0;
+    }
+
+    .signature p {
+        font-size: 9px;
+    }
+
+    .certificate-footer {
+        font-size: 8px;
+    }
+}
